@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6BB3EAB229B24EC1008C793D /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3EAB129B24EC1008C793D /* main.cpp */; };
+		6BB3EABA29B24FA7008C793D /* socket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3EAB829B24FA7008C793D /* socket.cpp */; };
+		6BB3EABD29B4BC93008C793D /* server.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3EABB29B4BC93008C793D /* server.cpp */; };
+		6BB3EAC029B4BD48008C793D /* client.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 6BB3EABE29B4BD48008C793D /* client.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +26,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		6BB3EAAE29B24EC1008C793D /* TCP */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TCP; sourceTree = BUILT_PRODUCTS_DIR; };
+		6BB3EAAE29B24EC1008C793D /* Socket */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Socket; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BB3EAB129B24EC1008C793D /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		6BB3EAB829B24FA7008C793D /* socket.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = socket.cpp; sourceTree = "<group>"; };
+		6BB3EAB929B24FA7008C793D /* socket.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = socket.hpp; sourceTree = "<group>"; };
+		6BB3EABB29B4BC93008C793D /* server.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = server.cpp; sourceTree = "<group>"; };
+		6BB3EABC29B4BC93008C793D /* server.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = server.hpp; sourceTree = "<group>"; };
+		6BB3EABE29B4BD48008C793D /* client.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = client.cpp; sourceTree = "<group>"; };
+		6BB3EABF29B4BD48008C793D /* client.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = client.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +50,7 @@
 		6BB3EAA529B24EC1008C793D = {
 			isa = PBXGroup;
 			children = (
-				6BB3EAB029B24EC1008C793D /* TCP */,
+				6BB3EAB029B24EC1008C793D /* Socket */,
 				6BB3EAAF29B24EC1008C793D /* Products */,
 			);
 			sourceTree = "<group>";
@@ -49,25 +58,31 @@
 		6BB3EAAF29B24EC1008C793D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6BB3EAAE29B24EC1008C793D /* TCP */,
+				6BB3EAAE29B24EC1008C793D /* Socket */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6BB3EAB029B24EC1008C793D /* TCP */ = {
+		6BB3EAB029B24EC1008C793D /* Socket */ = {
 			isa = PBXGroup;
 			children = (
 				6BB3EAB129B24EC1008C793D /* main.cpp */,
+				6BB3EAB829B24FA7008C793D /* socket.cpp */,
+				6BB3EAB929B24FA7008C793D /* socket.hpp */,
+				6BB3EABE29B4BD48008C793D /* client.cpp */,
+				6BB3EABF29B4BD48008C793D /* client.hpp */,
+				6BB3EABB29B4BC93008C793D /* server.cpp */,
+				6BB3EABC29B4BC93008C793D /* server.hpp */,
 			);
-			path = TCP;
+			path = Socket;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6BB3EAAD29B24EC1008C793D /* TCP */ = {
+		6BB3EAAD29B24EC1008C793D /* Socket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6BB3EAB529B24EC1008C793D /* Build configuration list for PBXNativeTarget "TCP" */;
+			buildConfigurationList = 6BB3EAB529B24EC1008C793D /* Build configuration list for PBXNativeTarget "Socket" */;
 			buildPhases = (
 				6BB3EAAA29B24EC1008C793D /* Sources */,
 				6BB3EAAB29B24EC1008C793D /* Frameworks */,
@@ -77,9 +92,9 @@
 			);
 			dependencies = (
 			);
-			name = TCP;
+			name = Socket;
 			productName = TCP;
-			productReference = 6BB3EAAE29B24EC1008C793D /* TCP */;
+			productReference = 6BB3EAAE29B24EC1008C793D /* Socket */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -96,7 +111,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 6BB3EAA929B24EC1008C793D /* Build configuration list for PBXProject "TCP" */;
+			buildConfigurationList = 6BB3EAA929B24EC1008C793D /* Build configuration list for PBXProject "Socket" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -109,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6BB3EAAD29B24EC1008C793D /* TCP */,
+				6BB3EAAD29B24EC1008C793D /* Socket */,
 			);
 		};
 /* End PBXProject section */
@@ -119,6 +134,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BB3EABA29B24FA7008C793D /* socket.cpp in Sources */,
+				6BB3EABD29B4BC93008C793D /* server.cpp in Sources */,
+				6BB3EAC029B4BD48008C793D /* client.cpp in Sources */,
 				6BB3EAB229B24EC1008C793D /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -254,7 +272,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		6BB3EAA929B24EC1008C793D /* Build configuration list for PBXProject "TCP" */ = {
+		6BB3EAA929B24EC1008C793D /* Build configuration list for PBXProject "Socket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6BB3EAB329B24EC1008C793D /* Debug */,
@@ -263,7 +281,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6BB3EAB529B24EC1008C793D /* Build configuration list for PBXNativeTarget "TCP" */ = {
+		6BB3EAB529B24EC1008C793D /* Build configuration list for PBXNativeTarget "Socket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6BB3EAB629B24EC1008C793D /* Debug */,
