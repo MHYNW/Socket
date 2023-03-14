@@ -15,9 +15,10 @@ class SOCKET::CLIENT {
     const std::string server_IP;
     const std::string file_name;
     const int tcpConnect();
-    int getFileSize();
-    int fileRead(std::string& file_buf, int& len);
-    int sendData(const int sockfd, std::string& file_buf, int len);
+    size_t getFileSize();
+    int fileRead(std::string& file_buf, size_t& len);
+    int sendData(const int sockfd, std::string& file_buf, size_t len);
+    int sendHeader(const int sockfd, size_t len);
 public:
     CLIENT(const std::string& file_name, const std::string& server_IP, const int& server_port);
     int run();

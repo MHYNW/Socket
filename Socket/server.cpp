@@ -167,7 +167,6 @@ int SOCKET::SERVER::fileWrite(const std::string filename, const std::string& dat
     return 0;
 }
 
-
 int SOCKET::SERVER::getClientIP(const int sockfd)
 {
     sockaddr_in sock;
