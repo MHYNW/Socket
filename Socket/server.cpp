@@ -10,7 +10,7 @@
 SOCKET::SERVER::SERVER(const std::string& dir, const int port)
                         : save_dir{dir}, port{port}
 {
-    std::clog << "File Directory: " << dir << " ," << "Port: " << port << std::endl;
+    std::clog << "File Directory: " << dir << ", " << "Port: " << port << std::endl;
 }
 
 int SOCKET::SERVER::run()
@@ -156,8 +156,8 @@ int SOCKET::SERVER::fileWrite(const std::string filename, const std::string& dat
         return -1;
     }
     else {
-        file.open(filename);    // error caution
-        //file.open("Sended File.txt");
+        //file.open(filename);    // error caution
+        file.open("Sended_File.txt");
         if (!file.is_open()) {
             std::cerr << "Failed to Open File" << std::endl;
             return -1;
