@@ -20,6 +20,8 @@ class SOCKET::SERVER : protected SOCKET::TCPHEADER {
     int recvData(const int accpt_sockfd, std::string& filedata, size_t data_len);
     int recvHeader(const int accpt_sockfd, char* header_packet, size_t head_len);
     int fileRecv(const int accpt_sockfd);
+    int waitingClient(int& accept_sockfd, int& listen_sockfd,
+                      sockaddr_in& server_addr, sockaddr_in& client_addr, socklen_t& len) noexcept;
 public:
     SERVER(const std::string& dir, const int port);
     int run();
