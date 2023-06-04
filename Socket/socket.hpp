@@ -31,17 +31,21 @@
 #define HEADER_TYPE             ('$')
 
 const std::string FAIL_TCP_LISTEN = "Failed to Listen TCP";
+const std::string FAIL_TCP_CONNECT = "Failed to Connect TCP";
+const std::string FAIL_IP_LOAD = "Failed to Load IP";
 const std::string FAIL_SOCKET_OPEN = "Failed to Open Socket";
 const std::string FAIL_SOCKET_BIND = "Failed to Bind Socket";
 const std::string FAIL_SOCKET_LISTEN = "Failed to Listen Socket";
 const std::string FAIL_HEADER_RECEIVE = "Failed to Receive Header";
 const std::string FAIL_DATA_RECEIVE = "Failed to Receive Data";
+const std::string FAIL_DATA_SEND = "Failed to Send Data";
+const std::string FAIL_DATA_LOAD = "Failed to Load Data";
 const std::string FAIL_PACKET_READ = "Failed to Read Packet";
 const std::string FAIL_FILE_WRITE = "Failed to Write File";
-const std::string FAIL_DATA_LOAD = "Failed to Load Data";
 const std::string FAIL_FILE_OPEN = "Failed to Open File";
-const std::string FAIL_IP_LOAD = "Failed to Load IP";
 const std::string FAIL_FILE_SAVE = "Failed to Save File";
+const std::string FAIL_FILE_READ = "Failed to Read File";
+const std::string FAIL_SERVER_CONNECT = "Failed to Connect Server";
 
 
 namespace SOCKET {
