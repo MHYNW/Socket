@@ -150,7 +150,7 @@ int SOCKET::CLIENT::sendData(const int sockfd, std::string& file_buf, size_t len
         delete[] data_buff;
         delete[] data_packet;
     }
-        return 0;
+    return 0;
 }
 
 int SOCKET::CLIENT::sendHeader(const int sockfd, size_t len)

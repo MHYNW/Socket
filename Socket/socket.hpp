@@ -47,7 +47,6 @@ const std::string FAIL_FILE_SAVE = "Failed to Save File";
 const std::string FAIL_FILE_READ = "Failed to Read File";
 const std::string FAIL_SERVER_CONNECT = "Failed to Connect Server";
 
-
 namespace SOCKET {
     struct TCPHEADER;
     class SERVER;

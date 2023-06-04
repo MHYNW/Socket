@@ -28,7 +28,7 @@ int SOCKET::SERVER::run()
     } catch (std::string exp) {
         std::cerr << exp << std::endl;
     }
-        return 0;
+    return 0;
 }
 
 
@@ -146,11 +146,11 @@ int SOCKET::SERVER::recvData(const int accpt_sockfd, std::string& filedata, size
             filedata.append(data_packet, recv_data);
             data_len -= recv_data;
         }
+        delete[] data_packet;
     } catch (std::string exp) {
         delete[] data_packet;
         std::cerr << exp << std::endl;
     }
-    delete[] data_packet;
     return 0;
 }
 
