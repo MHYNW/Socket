@@ -1,0 +1,7 @@
+Socket/client
+Socket/client.hpp.gch
+Socket/server
+Socket/server.hpp.gch
+Socket/socket.hpp.gch
+Socket/server.o
+Socket/client.o
