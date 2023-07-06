@@ -5,3 +5,5 @@ Socket/server.hpp.gch
 Socket/socket.hpp.gch
 Socket/server.o
 Socket/client.o
+Socket/server
+Socket/client
